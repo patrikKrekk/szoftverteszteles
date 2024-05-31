@@ -22,3 +22,4 @@ Feature: Saucedemo Checkout
       |           | Doe      | 12345   | Error: First Name is required         |
       | John      |          | 12345   | Error: Last Name is required          |
       |           | Doe      |         | Error: First Name is required         |
+      |           |          | 12345   | Error: First Name is required         |

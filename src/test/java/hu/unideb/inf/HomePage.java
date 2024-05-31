@@ -22,7 +22,7 @@ public class HomePage {
     @FindBy(css = "#checkout_summary_container > div > div.summary_info > div.summary_total_label")
     private WebElement priceLabel;
 
-    @FindBy(css = "#checkout_info_container > div > form > div.error-message-container.error > h3")
+    @FindBy(css = "#checkout_info_container > div > form > div > div.error-message-container.error > h3")
     private WebElement checkoutErrorMessage;
 
     private static final Map<String, By> textFields = Map.of(
