@@ -22,6 +22,9 @@ public class HomePage {
     @FindBy(css = "#checkout_summary_container > div > div.summary_info > div.summary_total_label")
     private WebElement priceLabel;
 
+    @FindBy(css = "#checkout_info_container > div > form > div.error-message-container.error > h3")
+    private WebElement checkoutErrorMessage;
+
     private static final Map<String, By> textFields = Map.of(
             "Username", By.id("user-name"),
             "Password", By.id("password"),
@@ -114,5 +117,9 @@ public class HomePage {
     public List<String> getProductNames() {
         List<WebElement> productElements = driver.findElements(By.className("inventory_item_name"));
         return productElements.stream().map(WebElement::getText).collect(Collectors.toList());
+    }
+
+    public String getCheckoutErrorMessage() {
+        return checkoutErrorMessage.getText();
     }
 }
